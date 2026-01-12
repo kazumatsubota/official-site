@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.8;
+    background-color: #f9fbfd; /* わずかに青みのある白 */
+}
+
+/* ヘッダー */
+.header {
+    width: 100%;
+    height: 380px; /* 動画の高さに合わせる */
+    position: relative; /* 子要素の基準点にする */
+    overflow: hidden; /* 動画のはみ出しを防ぐ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* 背景が白だと動画読み込み前に浮くので黒を推奨 */
+}
+
+.header h1 {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    /* 右側のズレ防止：字間の分だけ右マージンをマイナスにする */
+    margin-right: -0.3em; 
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    /* 余計なパディングがあればリセット */
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 親要素（380px）いっぱいに広げる */
+    object-fit: cover;
+    z-index: 1;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 380px;
+    background: rgba(0, 0, 0, 0.5); /* 30%の暗さ */
+    z-index: 2; /* 動画の上、文字の下 */
+}
+
+/* メインコンテンツの幅制限 */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* ギャラリー全体の枠 */
+.gallery-container {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 80px;
+    background-color: #fff; /* 背景を白にすると写真が引き立ちます */
+    padding: 20px 0;
+}
+
+/* スライドの中身 */
+.gallery {
+    display: flex;
+    gap: 10px; /* 写真同士の隙間 */
+    user-select: none;           /* テキスト選択不可 */
+    -webkit-user-drag: none;    /* ドラッグ不可（Chrome/Safari） */
+    pointer-events: none;
+
+    width: max-content; /* 中身の幅に合わせる */
+    
+    /* ↓ アニメーションの設定 */
+    /* 30sは速度です。数字を小さくすると速く、大きくすると遅くなります */
+    animation: scroll-loop 40s linear infinite;
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* 各写真のサイズ設定 */
+.photo-item {
+    flex: 0 0 300px;
+    aspect-ratio: 3 / 2;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    pointer-events: none; /* 画像ドラッグを防止してスクロールを安定させる */
+}
+
+
+
+/* セクション共通 */
+section {
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    border-bottom: 1px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    letter-spacing: 0.2em;
+}
+
+/* プロフィール */
+.profile-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.profile-icon {
+    flex: 0 0 200px;
+
+}
+
+.profile-icon img {
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    object-fit: cover;
+    background-color: #eee;
+}
+
+.profile-content div {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* ギアリスト（箇条書き） */
+.gear-list {
+    list-style: none;
+    padding: 0;
+}
+
+.gear-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.Career-p1{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    }
+
+.Career-p2{
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+
+    }
+/* コンタクト */
+.contact {
+    text-align: center;
+    padding: 60px 0;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+
+
+
+/* 箇条書きリストの設定 */
+.contact-list {
+    list-style: none; /* 点を消す */
+    padding: 0;
+    margin: 20px 0 0 0; /* 上に少し余白 */
+}
+
+.contact-list li {
+    margin-bottom: 12px; /* 項目ごとの行間 */
+    font-size: 0.95rem;
+    color: #333;
+
+}
+
+/* Name: Mail: などのラベル部分を少し太く、または薄くしてデザイン性を出す */
+.contact-list li span {
+    display: inline-block;
+    width: 120px; /* ラベルの幅を揃えると、その後の文字が縦に綺麗に並びます */
+    font-weight: bold;
+    color: #666;
+}
+
+/* リンクの色（メールやインスタ） */
+.contact-list a {
+    color: #0066cc; /* 海らしい青色 */
+    text-decoration: none; /* 下線を消す */
+    transition: opacity 0.3s;
+}
+
+.contact-list a:hover {
+    opacity: 0.7; /* ホバー時に少し薄くする */
+    text-decoration: underline; /* ホバー時のみ下線を出す */
+}
+
+/* Instagramアイコン専用のスタイル */
+.fa-instagram {
+    margin-right: 8px; /* アイコンと文字の間の余白 */
+    font-size: 1.1rem; /* アイコンの大きさを少し調整 */
+    vertical-align: middle; /* 文字と高さを揃える */
+    color: #E1306C; /* Instagramブランドのカラーにする場合。不要なら消してOK */
+}
+
+.fa-envelope {
+    margin-right: 8px; /* アイコンと文字の間の余白 */
+    font-size: 1.1rem; /* アイコンの大きさを少し調整 */
+    vertical-align: middle; /* 文字と高さを揃える */
+    color: #4459a0; /* Instagramブランドのカラーにする場合。不要なら消してOK */
+}
+
+.fa-user {
+    margin-right: 8px; /* アイコンと文字の間の余白 */
+    font-size: 1.1rem; /* アイコンの大きさを少し調整 */
+    vertical-align: middle; /* 文字と高さを揃える */
+    color: #3e475a; /* Instagramブランドのカラーにする場合。不要なら消してOK */
+}
+
+/* ホバー時に少し動かすとおしゃれです */
+.contact-list a:hover .fa-instagram .fa-envelope .fa-user{
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* レスポンシブ対応（スマホ表示） */
+@media (max-width: 600px) {
+    .body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header {
+        height: 250px; /* スマホでは少し高さを抑えるとおさまりが良いです */
+    }
+    .header-video {
+        height: 100%;
+    }
+    .header h1 {
+        font-size: 1.2rem; /* スマホに合わせて少し小さく */
+    }
+    .contact-text {
+        font-size: 0.8rem;
+    }
+    .contact-list li {
+        font-size: 0.8rem;
+    }
+
+    .gear-list li {
+    text-align: left;
+    margin-left: 30px;
+    }
+
+    .profile-icon img {
+    width: 250px;
+    height: 250px;
+}
+    
+    
+}
