@@ -37,13 +37,14 @@ body {
     margin-bottom: 0;
 }
 
-.header-video {
+.header-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%; /* 親要素（380px）いっぱいに広げる */
     object-fit: cover;
+    object-position: center 45%;
     z-index: 1;
 }
 
@@ -68,53 +69,38 @@ main {
 
 /* ギャラリー全体の枠 */
 .gallery-container {
-    overflow: hidden;
     width: 100%;
     margin-bottom: 80px;
-    background-color: #fff; /* 背景を白にすると写真が引き立ちます */
-    padding: 20px 0;
+    background-color: #fff;
+    padding: 20px; /* 上下左右に余白を持たせると綺麗です */
+    box-sizing: border-box;
 }
 
-/* スライドの中身 */
+/* 2列のグリッドに変更 */
 .gallery {
-    display: flex;
-    gap: 10px; /* 写真同士の隙間 */
-    user-select: none;           /* テキスト選択不可 */
-    -webkit-user-drag: none;    /* ドラッグ不可（Chrome/Safari） */
-    pointer-events: none;
-
-    width: max-content; /* 中身の幅に合わせる */
+    display: grid;
+    /* 1列の幅を50%ずつに分け、隙間(gap)を考慮する設定 */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; /* 写真同士の隙間（適宜調整してください） */
     
-    /* ↓ アニメーションの設定 */
-    /* 30sは速度です。数字を小さくすると速く、大きくすると遅くなります */
-    animation: scroll-loop 40s linear infinite;
-}
-
-@keyframes scroll-loop {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    /* アニメーション関連は不要なため削除 */
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 /* 各写真のサイズ設定 */
 .photo-item {
-    flex: 0 0 300px;
+    width: 100%; /* 親要素のグリッド幅に合わせる */
     aspect-ratio: 3 / 2;
-    -webkit-user-drag: none;
-    pointer-events: none;
+    overflow: hidden;
 }
 
 .photo-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-user-drag: none;
-    pointer-events: none; /* 画像ドラッグを防止してスクロールを安定させる */
+    display: block;
 }
-
 
 
 /* セクション共通 */
