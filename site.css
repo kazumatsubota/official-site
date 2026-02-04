@@ -143,6 +143,11 @@ h2 {
     min-width: 300px;
 }
 
+.profile p{
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
 /* ギアリスト（箇条書き） */
 .gear-list {
     list-style: none;
