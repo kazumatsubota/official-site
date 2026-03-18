@@ -84,7 +84,7 @@ main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
-    margin-top: 700px; /* ヘッダーの高さ分だけ開始位置を下げる */
+    margin-top: 800px; /* ヘッダーの高さ分だけ開始位置を下げる */
     background-color: #ffffff;
     position: relative; /* z-indexを有効にするため（必要に応じて） */
     z-index: 1;
