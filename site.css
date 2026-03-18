@@ -79,6 +79,33 @@ body {
     z-index: 2; /* 動画の上、文字の下 */
 }
 
+.scroll-minimal {
+    position: absolute;
+    left: 50%;
+    bottom: 30px; /* 下からの位置 */
+    transform: translateX(-50%); /* 横方向の中央揃え */
+    z-index: 10;
+    display: flex;
+    align-items: center; /* 縦方向の中央揃え */
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.25em; /* 文字間隔を広くして格好よく */
+    font-size: 10px; /* 小さく配置 */
+}
+
+/* 矢印（↓）のスタイル */
+.scroll-minimal .arrow {
+  margin-left: 10px; /* 文字との間隔 */
+  font-size: 15px; /* 矢印を少し大きく */
+  animation: arrow-bounce 1.5s ease-in-out infinite; /* 動かす */
+}
+
+/* 矢印が静かに上下するアニメーション */
+@keyframes arrow-bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(5px); } /* 5px下に動く */
+}
+
 /* メインコンテンツの幅制限 */
 main {
     max-width: 1000px;
