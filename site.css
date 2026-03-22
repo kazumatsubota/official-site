@@ -4,7 +4,7 @@ body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     color: #333;
     line-height: 1.8;
-    background-color: #f9fbfd; /* わずかに青みのある白 */
+    background-color: #dfe4ea; /* わずかに青みのある白 */
 }
 
 /* ヘッダー */
@@ -24,7 +24,7 @@ body {
 .header h1 {
     position: relative;
     z-index: 10;
-    color: #fff;
+    color: #dfe4ea;
     font-size: 1.5rem;
     font-weight: 200;
     letter-spacing: 0.3em;
@@ -87,7 +87,7 @@ body {
     z-index: 10;
     display: flex;
     align-items: center; /* 縦方向の中央揃え */
-    color: #fff;
+    color: #dfe4ea;
     font-family: 'Arial', sans-serif;
     letter-spacing: 0.25em; /* 文字間隔を広くして格好よく */
     font-size: 10px; /* 小さく配置 */
@@ -112,7 +112,7 @@ main {
     margin: 0 auto;
     padding: 40px 20px;
     margin-top: 600px; /* ヘッダーの高さ分だけ開始位置を下げる */
-    background-color: #ffffff;
+    background-color: #000; /* 背景が白だと動画読み込み前に浮くので黒を推奨 */
     position: relative; /* z-indexを有効にするため（必要に応じて） */
     z-index: 1;
 }
@@ -122,7 +122,7 @@ main {
 .gallery-container {
     width: 100%;
     margin-bottom: 80px;
-    background-color: #fff;
+    background-color: #000; /* 背景が白だと動画読み込み前に浮くので黒を推奨 */
     padding: 20px; /* 上下左右に余白を持たせると綺麗です */
     box-sizing: border-box;
 }
@@ -159,9 +159,21 @@ section {
     margin-bottom: 80px;
 }
 
-h2 {
+.h2-1 {
     font-size: 1.2rem;
-    border-bottom: 1px solid #333;
+    color: #dfe4ea;
+    border-bottom: 1px solid #dfe4ea;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    letter-spacing: 0.2em;
+}
+
+.h2-2 {
+    font-size: 1.2rem;
+    color: #1e2023;
+    border-bottom: 1px solid #1e2023;
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 30px;
@@ -195,7 +207,7 @@ h2 {
 }
 
 .profile-text {
-    margin-bottom: 15px;
+    color: #dfe4ea;
     font-size: 0.8rem;
 }
 
@@ -206,17 +218,20 @@ h2 {
 }
 
 .gear-list li {
+    color: #dfe4ea;
     margin-bottom: 10px;
     font-size: 0.8rem;
 }
 
 .Career-p1{
+    color: #dfe4ea;
     margin-bottom: 15px;
     font-size: 13px;
     font-weight: bold;
     }
 
 .Career-p2{
+    color: #dfe4ea;
     margin-bottom: 15px;
     font-size: 0.85rem;
 
@@ -227,6 +242,12 @@ h2 {
     padding: 60px 0;
     background-color: #fff;
     border: 1px solid #eee;
+}
+
+.contact-text{
+    color: #333;
+    font-size: 0.5rem;
+    margin-bottom: 30px;
 }
 
 
@@ -291,6 +312,18 @@ h2 {
 .contact-list a:hover .fa-instagram .fa-envelope .fa-user{
     transform: scale(1.1);
     transition: transform 0.2s;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000; /* 背景が白だと動画読み込み前に浮くので黒を推奨 */
+    color: #dfe4ea;
+    font-size: 0.8rem;
+}
+
+.footer-text {
+    margin: 0;
 }
 
 /* レスポンシブ対応（スマホ表示） */
