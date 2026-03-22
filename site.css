@@ -4,7 +4,7 @@ body {
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     color: #333;
     line-height: 1.8;
-    background-color: #dfe4ea; /* わずかに青みのある白 */
+    background-color: #000; /* わずかに青みのある白 */
 }
 
 /* ヘッダー */
