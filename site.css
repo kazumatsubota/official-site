@@ -237,27 +237,27 @@ section {
 
 /* 各行を横並びにするスタイル */
 .career-item {
-  display: flex;
-  gap: 20px; /* 日付と本文の間の余白 */
-  margin-bottom: 24px; /* 各項目の下の余白 */
+　　display: flex;
+  　gap: 20px; /* 日付と本文の間の余白 */
+  　margin-bottom: 24px; /* 各項目の下の余白 */
 }
 
 /* 左側：日付の幅を固定 */
 .career-date {
   width: 80px; /* 日付エリアの幅（お好みで調整） */
   flex-shrink: 0; /* 幅が小さく潰れないように固定 */
-  font-weight: bold;
+　font-weight: bold;
 }
 
 /* 右側：残りの幅いっぱいに広げる */
 .career-content {
-  flex: 1;
+　flex: 1;
 }
 
 /* リンクをブロック表示にして改行させる調整 */
 a.Career-p2 {
-  display: inline-block;
-  margin-top: 4px;
+　display: inline-block;
+　margin-top: 4px;
 }
 
     }
