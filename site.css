@@ -239,10 +239,7 @@ section {
 /* 各行を横並びにする */
 .career-item {
     gap: 5px; /* 日付と文章の間のスペース */
-    margin-bottom: 5px; /* 項目ごとの下の余白 */
-    align-items: center;
-    text-align: left; /* スマホで見やすくするため左寄せを推奨 */
-}
+    margin-bottom: 5px; /* 項目ごとの下の余白 */}
 
 /* 左側：日付の幅を固定 */
 .career-date {
@@ -251,10 +248,6 @@ section {
     font-weight: bold;
 }
 
-/* 右側：残りのスペースに文章を広げる */
-.career-content {
-    flex: 1;
-}
 
 /* リンクを綺麗に改行させるため */
 a.Career-p2 {
