@@ -238,7 +238,6 @@ section {
 
 /* 各行を横並びにする */
 .career-item {
-    display: flex;
     gap: 5px; /* 日付と文章の間のスペース */
     margin-bottom: 5px; /* 項目ごとの下の余白 */
     align-items: center;
@@ -259,7 +258,6 @@ section {
 
 /* リンクを綺麗に改行させるため */
 a.Career-p2 {
-    display: inline-block;
     margin-top: 4px;
 }
 
