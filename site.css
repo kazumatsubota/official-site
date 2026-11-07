@@ -223,14 +223,14 @@ section {
     font-size: 0.8rem;
 }
 
-.Career-p1{
+.Career-p1 {
     color: #dfe4ea;
     margin-bottom: 15px;
     font-size: 13px;
     font-weight: bold;
-    }
+}
 
-.Career-p2{
+.Career-p2 {
     color: #dfe4ea;
     margin-bottom: 15px;
     font-size: 0.85rem;
@@ -239,17 +239,17 @@ section {
 /* 各行を横並びにする */
 .career-item {
     display: flex;
-  gap: 5px; /* 日付と文章の間のスペース */
-  margin-bottom: 5px; /* 項目ごとの下の余白 */
-　align-items: center;
-　text-align: center;
+    gap: 5px; /* 日付と文章の間のスペース */
+    margin-bottom: 5px; /* 項目ごとの下の余白 */
+    align-items: center;
+    text-align: left; /* スマホで見やすくするため左寄せを推奨 */
 }
 
 /* 左側：日付の幅を固定 */
 .career-date {
     width: 80px;
-  flex-shrink: 0; /* 画面が狭くなっても日付が縮まらないようにする */
-font-weight: bold;
+    flex-shrink: 0; /* 画面が狭くなっても日付が縮まらないようにする */
+    font-weight: bold;
 }
 
 /* 右側：残りのスペースに文章を広げる */
@@ -263,7 +263,6 @@ a.Career-p2 {
     margin-top: 4px;
 }
 
-    
 /* コンタクト */
 .contact {
     text-align: center;
@@ -272,13 +271,11 @@ a.Career-p2 {
     border: 1px solid #eee;
 }
 
-.contact-text{
+.contact-text {
     color: #333;
     font-size: 0.5rem;
     margin-bottom: 30px;
 }
-
-
 
 /* 箇条書きリストの設定 */
 .contact-list {
@@ -291,7 +288,6 @@ a.Career-p2 {
     margin-bottom: 12px; /* 項目ごとの行間 */
     font-size: 0.95rem;
     color: #333;
-
 }
 
 /* Name: Mail: などのラベル部分を少し太く、または薄くしてデザイン性を出す */
@@ -319,25 +315,27 @@ a.Career-p2 {
     margin-right: 8px; /* アイコンと文字の間の余白 */
     font-size: 1.1rem; /* アイコンの大きさを少し調整 */
     vertical-align: middle; /* 文字と高さを揃える */
-    color: #E1306C; /* Instagramブランドのカラーにする場合。不要なら消してOK */
+    color: #E1306C;
 }
 
 .fa-envelope {
-    margin-right: 8px; /* アイコンと文字の間の余白 */
-    font-size: 1.1rem; /* アイコンの大きさを少し調整 */
-    vertical-align: middle; /* 文字と高さを揃える */
-    color: #4459a0; /* Instagramブランドのカラーにする場合。不要なら消してOK */
+    margin-right: 8px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    color: #4459a0;
 }
 
 .fa-user {
-    margin-right: 8px; /* アイコンと文字の間の余白 */
-    font-size: 1.1rem; /* アイコンの大きさを少し調整 */
-    vertical-align: middle; /* 文字と高さを揃える */
-    color: #3e475a; /* Instagramブランドのカラーにする場合。不要なら消してOK */
+    margin-right: 8px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+    color: #3e475a;
 }
 
-/* ホバー時に少し動かすとおしゃれです */
-.contact-list a:hover .fa-instagram .fa-envelope .fa-user{
+/* ホバー時に少し動かす（※セレクタを個別指定に修正） */
+.contact-list a:hover .fa-instagram,
+.contact-list a:hover .fa-envelope,
+.contact-list a:hover .fa-user {
     transform: scale(1.1);
     transition: transform 0.2s;
 }
@@ -345,7 +343,7 @@ a.Career-p2 {
 .footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #000; /* 背景が白だと動画読み込み前に浮くので黒を推奨 */
+    background-color: #000;
     color: #dfe4ea;
     font-size: 0.8rem;
 }
@@ -362,17 +360,16 @@ a.Career-p2 {
         text-align: center;
     }
     .header {
-        height: 600px; /* スマホでは少し高さを抑えるとおさまりが良いです */
+        height: 600px;
     }
-
     .header::after {
-    height: 600px;
-}
+        height: 600px;
+    }
     .header-video {
         height: 100%;
     }
     .header h1 {
-        font-size: 1.2rem; /* スマホに合わせて少し小さく */
+        font-size: 1.2rem;
     }
     .contact-text {
         font-size: 0.8rem;
@@ -380,23 +377,17 @@ a.Career-p2 {
     .contact-list li {
         font-size: 0.8rem;
     }
-
     .gear-list li {
-    text-align: left;
-    margin-left: 30px;
+        text-align: left;
+        margin-left: 30px;
     }
-    
-
     .profile-icon img {
-    width: 250px;
-    height: 250px;
-}
-
-.profile-text {
-    font-size: 0.7rem;
-    text-align: left;
-    margin-left: 20px;
-}
-    
-    
+        width: 250px;
+        height: 250px;
+    }
+    .profile-text {
+        font-size: 0.7rem;
+        text-align: left;
+        margin-left: 20px;
+    }
 }
