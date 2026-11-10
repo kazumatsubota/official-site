@@ -225,14 +225,14 @@ section {
 
 .Career-p1 {
     color: #dfe4ea;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 13px;
     font-weight: bold;
 }
 
 .Career-p2 {
     color: #dfe4ea;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-size: 0.85rem;
 }
 
@@ -249,10 +249,6 @@ section {
 }
 
 
-/* リンクを綺麗に改行させるため */
-a.Career-p2 {
-    margin-top: 4px;
-}
 
 /* コンタクト */
 .contact {
@@ -372,6 +368,11 @@ a.Career-p2 {
         text-align: left;
         margin-left: 30px;
     }
+
+    .career-item {
+    text-align: left;
+        margin-left: 30px;}
+
     .profile-icon img {
         width: 250px;
         height: 250px;
