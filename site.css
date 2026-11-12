@@ -44,6 +44,7 @@ body {
     width: 50px;
     height: 5px;
     margin: 8px auto;
+    top:5px;
     border-radius: 10%;
     background-color: #dfe4ea;
     animation: point-bounce 1.5s ease-in-out infinite;
