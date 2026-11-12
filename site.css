@@ -77,7 +77,6 @@ body {
 
 .menu-container {
     position: relative; /* ★これがないと absolute が正しく機能しません */
-    display: inline-block;
 }
 /* ★コンテナにマウスが乗ったとき、メニューを表示する */
 .menu-container:hover .menu {
