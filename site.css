@@ -81,7 +81,7 @@ body {
 }
 
 /* メニュー内のリンクのデザイン */
-.menu-list li a {
+.menu li a {
     display: block;
     padding: 10px 16px;
     color: #333;
@@ -90,7 +90,7 @@ body {
     transition: background-color 0.2s;
 }
 
-.menu-list li a:hover {
+.menu li a:hover {
     background-color: #f0f0f0;
 }
 
