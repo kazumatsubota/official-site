@@ -79,6 +79,7 @@ body {
     position: relative; /* ★これがないと absolute の基準が狂います */
     display: inline-block;
     margin-left: 30px;
+    border: 2px solid red; /* ★テスト用の赤い枠線 */
 }
 
 
