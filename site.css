@@ -39,6 +39,23 @@ body {
     margin-bottom: 0;
 }
 
+.header point span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 5px auto;
+    border-radius: 50%;
+    background-color: #dfe4ea;
+    animation: point-bounce 1.5s ease-in-out infinite;
+}
+
+.header point{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
 @keyframes text-focus-in {
 0% {
