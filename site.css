@@ -63,9 +63,9 @@ body {
 .menu {
     display: none;
     position: absolute;
-    top: 44px; /* ★ボタンの高さ（44px）とピッタリくっつけるのが重要 */
-    width: 100vw;
-    height: 200px;
+    top: 44px; /* ボタンの高さと合わせる */
+    left: 0;   /* 親の左端に合わせる */
+    width: 200px; /* 適切なメニューの幅（100vwではなく固定幅やautoにする） */
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
@@ -73,6 +73,12 @@ body {
     padding: 8px 0;
     margin: 0;
     z-index: 100;
+}
+
+.menu-container {
+    position: relative; /* ★これがないと absolute の基準が狂います */
+    display: inline-block;
+    margin-left: 30px;
 }
 
 
