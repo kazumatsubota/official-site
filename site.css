@@ -43,8 +43,8 @@ body {
     display: block;
     width: 50px;
     height: 5px;
-    margin: 5px auto;
-    border-radius: 20%;
+    margin: 6px auto;
+    border-radius: 10%;
     background-color: #dfe4ea;
     animation: point-bounce 1.5s ease-in-out infinite;
 }
