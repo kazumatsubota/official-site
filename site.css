@@ -76,7 +76,7 @@ body {
 }
 
 /* ★コンテナにマウスが乗ったとき、メニューを表示する */
-.menu-container:hover .menu-list {
+.menu-container:hover .menu {
     display: block;
 }
 
