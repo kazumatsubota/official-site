@@ -201,7 +201,7 @@ body {
 
 /* メインコンテンツの幅制限 */
 main {
-    max-width: 2000px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 40px 20px;
     margin-top: 600px; /* ヘッダーの高さ分だけ開始位置を下げる */
