@@ -21,11 +21,12 @@
     <header class="header">
         <img class="header-img" src="カメ.jpg" alt="header image">
         <div class="menu-container">
-        <div class="bar">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label class="bar" for="menu-toggle" aria-label="メニューを開閉">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </label>
         <div class="menu">
             <ul>
                 <li><a href="#about">PROFILE</a></li>
@@ -156,6 +157,12 @@
         <p class="footer-text">Copyright © 2026 KAZUMA TSUBOTA All rights reserved.</p>
     </footer>
 
-
+    <script>
+        document.querySelectorAll('.menu a').forEach((link) => {
+            link.addEventListener('click', () => {
+                document.getElementById('menu-toggle').checked = false;
+            });
+        });
+    </script>
 </body>
 </html>

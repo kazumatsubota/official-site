@@ -53,32 +53,53 @@ body {
 
 .menu {
     display: none;
-    position: absolute;
-    top: 44px; /* ボタンの高さと合わせる */
-    left: 0;   /* 親の左端に合わせる */
-    height: 100%;
-    width: 100%; /* 適切なメニューの幅（100vwではなく固定幅やautoにする） */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    border-radius: 6px;
     list-style: none;
-    padding: 8px 0;
+    padding: 120px 0 0;
     margin: 0;
     z-index: 100;
+}
+
+.menu ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
 
 .menu-container {
     position: absolute;
     top: 24px;
-    left: 30px;
-    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
     display: inline-block;
     cursor: pointer;
 }
 
+.bar {
+    display: block;
+    cursor: pointer;
+}
 
-/* ★コンテナにマウスが乗ったとき、メニューを表示する */
-.menu-container:hover .menu {
+.menu-toggle:checked ~ .menu {
     display: block;
 }
 
