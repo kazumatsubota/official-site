@@ -107,6 +107,17 @@ body {
     display: block;
 }
 
+.menu-close {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    z-index: 102;
+    color: #dfe4ea;
+    font-size: 40px;
+    line-height: 1;
+    cursor: pointer;
+}
+
 /* メニュー内のリンクのデザイン */
 .menu li a {
     display: block;
