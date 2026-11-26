@@ -56,7 +56,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 500px;
+    height: 100vh;
     width: 100vw;
     background-color: #000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -440,6 +440,12 @@ section {
         text-align: center;
     }
     .header {
+        height: 600px;
+    }
+    .header-img {
+        height: 600px;
+    }
+    .menu {
         height: 600px;
     }
     .header::after {
